@@ -219,7 +219,7 @@ public class DatiCondivisi {
      * salvata nel vettore "schermo" nella posizione indicata dall'attributo
      * primaPosizioneLibera
      */
-    public void aggiungiLinea(String s) {
+    public synchronized void aggiungiLinea(String s) {
         schermo[primaPosizioneLibera] = s;
         primaPosizioneLibera++;
     }
@@ -230,7 +230,7 @@ public class DatiCondivisi {
      * @brief Metodo che permette di visualizzare tutto il contenuto dello
      * schermo
      */
-    public void visualizzaLinee() {
+    public synchronized void visualizzaLinee() {
         for (int i = 0; i < this.primaPosizioneLibera; i++) {
             System.out.println(schermo[i]);
         }

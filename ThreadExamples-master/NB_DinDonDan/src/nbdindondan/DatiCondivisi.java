@@ -82,13 +82,13 @@ public class DatiCondivisi {
         }
         return x;
     }
-    public void aggiungi(String x) {
+    public synchronized void aggiungi(String x) {
         if (p >= maxElem)
             p = 0;
         schermo[p]=x;
         p+=1;
     }
-    public void printSchermo() {
+    public synchronized void printSchermo() {
         System.out.println("-------------------------------");
         for (int i = 0; i < p; i ++) {
             System.out.print(schermo[i] + " ");

@@ -17,6 +17,7 @@ public class DatiCondivisi {
      * Creo variabili di tipo int che mi vanno a contare i suoni effettuati dai thread.
      * 
      */
+    
     int contaDIN=0,contaDON=0,contaDAN=0;
     
     int maxElem=10000000;

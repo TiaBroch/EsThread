@@ -174,7 +174,7 @@ public class CDatiCondivisi {
      * 
      * @return Valore contenuto in una posizione dell'attributo schermo
      */
-    public String getRiga(int posizione) {
+    public synchronized String getRiga(int posizione) {
         return schermo[posizione];
     }
 
@@ -185,7 +185,7 @@ public class CDatiCondivisi {
      * fino a quando si arriva al numero di linee salvate nello stesso attributo.
      * 
      */
-    public void VisualizzaSchermo() {
+    public synchronized void VisualizzaSchermo() {
         System.out.println("--------------------------------");
         for (int i = 0; i < Elementi; i++) {
             if (schermo[i].equals("")) {
@@ -204,7 +204,7 @@ public class CDatiCondivisi {
      * 
      * @param str Stringa in cui è contenuto il valore della linea di testo da memorizzare.
      */
-    public void aggiungiStringa(String str) {
+    public synchronized void aggiungiStringa(String str) {
         schermo[Elementi] = str;
         Elementi++;
     }
